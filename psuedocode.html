@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Streamerz Pseudocode</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    h1 {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Streamerz – Generalized Pseudocode</h1>
+  <pre>
+BEGIN PROGRAM
+
+PRINT "Welcome to Streamerz!"
+
+CALL authenticate_user()
+    PROMPT user for username
+    PROMPT user for password
+    IF username and password are valid
+        RETURN True
+    ELSE
+        RETURN False
+
+IF authentication fails
+    PRINT "Access denied"
+    END PROGRAM
+
+PROMPT user to select favorite genres
+STORE selected genres in variable favorite_genres
+
+LOAD movies from database (movies.json)
+FILTER movies where genre matches favorite_genres
+DISPLAY filtered movie list to user
+
+PROMPT user with options:
+    1. Add movie to "queue"
+    2. Add movie to "watch later"
+    3. Adjust video quality (SD/HD/4K)
+    4. Cast to TV
+    5. Exit program
+
+IF user selects "queue"
+    APPEND chosen movie to queue_list
+
+IF user selects "watch later"
+    APPEND chosen movie to watch_later_list
+
+IF user selects "video quality"
+    PROMPT user for quality option
+    STORE user choice in variable video_quality
+
+IF user selects "cast"
+    PRINT "Casting to television..."
+
+WHILE user does not choose "Exit"
+    DISPLAY queue_list
+    DISPLAY watch_later_list
+    DISPLAY playback settings
+    PROMPT user for another action
+
+END PROGRAM
+  </pre>
+</body>
+</html>
